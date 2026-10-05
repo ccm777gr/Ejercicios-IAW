@@ -44,13 +44,21 @@ $alumnos = [
         ?>
         <tr>
             <td><?= $indice ?></td>
-            <td><?php if ($alumnoGenero[1] == 'H' ) {
-                ?>
-
-                <?php
-                }; $alumnoGenero[0] ?>
-            </td>
-            <td><?= $alumnoGenero[1] ?></td>
+            <td><?= $alumnoGenero[0] ?></td>
+            <?php
+                if ($alumnoGenero[1] == 'H' ) {
+            ?>
+            <td backgroundcolor="Green"><?= $alumnoGenero[1] ?></td>
+            <?php
+                }; 
+            ?>
+            <?php
+                if ($alumnoGenero[1] == 'M' ) {
+            ?>
+            <td backgroundcolor="Blue"><?= $alumnoGenero[1] ?></td>
+            <?php
+                }; 
+            ?>
         </tr>
         <?php
         };
