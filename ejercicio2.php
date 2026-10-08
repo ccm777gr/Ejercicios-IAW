@@ -1,24 +1,24 @@
 <?php
 $alumnos = [
-    ['Atienza Bermúdez, Alejandro', 'H'],
-    ['Calderer Sánchez, Lucas', 'H'],
-    ['Cano Merino, Carlos', 'H'],
-    ['Chari, Abdelali', 'H'],
-    ['García Zarco, Francisco José', 'H'],
-    ['Gómez Pérez, Samuel', 'H'],
-    ['Iáñez Navarro, Daniel', 'H'],
-    ['López Lasheras, Alan', 'H'],
-    ['Maldonado Cabezas, Francisco', 'H'],
-    ['Martín Arias, Carlos', 'H'],
-    ['Moreno González, Alexandra', 'M'],
-    ['Muñoz Moreno, Elisabet', 'M'],
-    ['Ourhzif, Aymane', 'H'],
-    ['Sánchez Ortiz, Emilio David', 'H'],
-    ['Sánchez Rodríguez, Beatriz', 'M'],
-    ['Torres Gómez, Ignacio', 'H'],
-    ['Uréndez Jiménez, Alba', 'M'],
-    ['Uribe Aranda, Francisco', 'H'],
-    ['Velasco Clavero, Pablo', 'H'],
+    ['Atienza Bermúdez, Alejandro', 'H', '45'],
+    ['Calderer Sánchez, Lucas', 'H', '3'],
+    ['Cano Merino, Carlos', 'H', '19'],
+    ['Chari, Abdelali', 'H', '25'],
+    ['García Zarco, Francisco José', 'H', '32'],
+    ['Gómez Pérez, Samuel', 'H', '145'],
+    ['Iáñez Navarro, Daniel', 'H', '12'],
+    ['López Lasheras, Alan', 'H', '17'],
+    ['Maldonado Cabezas, Francisco', 'H', '20'],
+    ['Martín Arias, Carlos', 'H', '44'],
+    ['Moreno González, Alexandra', 'M', '119'],
+    ['Muñoz Moreno, Elisabet', 'M', '25'],
+    ['Ourhzif, Aymane', 'H', '1'],
+    ['Sánchez Ortiz, Emilio David', 'H', '22'],
+    ['Sánchez Rodríguez, Beatriz', 'M', '73'],
+    ['Torres Gómez, Ignacio', 'H', '10'],
+    ['Uréndez Jiménez, Alba', 'M', '31'],
+    ['Uribe Aranda, Francisco', 'H', '23'],
+    ['Velasco Clavero, Pablo', 'H', '41'],
 ];
 //$alumnos[] = 'primer alumno';
 
@@ -37,6 +37,7 @@ $alumnos = [
             <td>#</td>
             <td>Alumno</td>
             <td>Género</td>
+            <td>Edad</td>
         </tr>
         <?php
         foreach($alumnos as $indice => $alumnoGenero) {
@@ -56,6 +57,20 @@ $alumnos = [
                 if ($alumnoGenero[1] == 'M' ) {
             ?>
             <td style="background-color: Blue;"><?= $alumnoGenero[1] ?></td>
+            <?php
+                }; 
+            ?>
+            <?php
+                if (($alumnoGenero[2]%2) == '1' ) {
+            ?>
+            <td style="background-color: Green;"><?= $alumnoGenero[2] ?></td>
+            <?php
+                }; 
+            ?>
+            <?php
+                if (($alumnoGenero[2]%2) == '0' ) {
+            ?>
+            <td style="background-color: Blue;"><?= $alumnoGenero[2] ?></td>
             <?php
                 }; 
             ?>
